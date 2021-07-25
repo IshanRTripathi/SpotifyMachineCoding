@@ -26,7 +26,7 @@ public class ArtistService {
     private AlbumRepository albumRepository;
 
     public Optional<Artist> findById(long id) {
-        return artistRepository.findById(Integer.parseInt(String.valueOf(id)));
+        return artistRepository.findById(id);
     }
 
     public List<Album> findAlbumByArtistName(String artistName) {

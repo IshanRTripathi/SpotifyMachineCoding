@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public interface ArtistRepository extends JpaRepository<Artist, Integer> {
+public interface ArtistRepository extends JpaRepository<Artist, Long> {
     @Query("from Album a where a.artistName= ?1")
     List<Album> findAlbumByArtistName(String artistName);
 }
